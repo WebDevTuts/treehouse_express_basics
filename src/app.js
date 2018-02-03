@@ -5,8 +5,11 @@ var express = require('express'),
 
 var app = express();
 
+app.set('view engine', 'pug');
+app.set('views', __dirname + '/templates');
+
 app.get('/', function(req, res) {
-  res.send("<h1>I love TeamTreeHouse!</h1>");
+  res.render('index');
 });
 
 app.get('/blog/:title?', function(req, res) {
