@@ -19,7 +19,7 @@ app.get('/blog/:title?', function(req, res) {
     res.send("This page is under construction!");
   } else {
     var post = posts[title];
-    res.send(post);
+    res.render('post');
   }
 });
 
